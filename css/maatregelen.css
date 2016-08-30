@@ -1,0 +1,17 @@
+/* line 1, ../scss/maatregelen.scss */
+.leipe-papagaai {
+  width: 200px;
+  display: inline;
+}
+
+/* line 7, ../scss/maatregelen.scss */
+.maatregelen .panel {
+  width: 15%;
+  margin: 20px 0.8% 20px 0.8%;
+  padding-bottom: 10px;
+  height: 113px;
+}
+/* line 12, ../scss/maatregelen.scss */
+.maatregelen .panel h6 {
+  font-size: 11px;
+}
