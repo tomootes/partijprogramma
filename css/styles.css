@@ -8806,24 +8806,40 @@ button.close {
   font-size: 11px;
 }
 
-/* line 4, ../scss/styles.scss */
+/* line 2, ../scss/_calculation.scss */
+.calculation .plus {
+  float: right;
+  font-size: 42px;
+  padding: 0px;
+  line-height: 30px;
+  margin: 0px;
+}
+/* line 9, ../scss/_calculation.scss */
+.calculation .total-line {
+  height: 4px;
+  width: 100%;
+  display: inline-block;
+  background: #333;
+}
+
+/* line 5, ../scss/styles.scss */
 .jumbotron {
   padding-left: 30px !important;
   padding-right: 30px !important;
   margin-top: 30px;
 }
-/* line 8, ../scss/styles.scss */
+/* line 9, ../scss/styles.scss */
 .jumbotron h4 {
   font-size: 19px;
   text-shadow: 2px 2px #FFFFFF;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 15, ../scss/styles.scss */
+/* line 16, ../scss/styles.scss */
 .jumbotron form label {
   font-weight: normal;
 }
-/* line 17, ../scss/styles.scss */
+/* line 18, ../scss/styles.scss */
 .jumbotron form label input {
   margin-right: 10px;
 }

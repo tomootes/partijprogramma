@@ -1,0 +1,15 @@
+.calculation{
+    .plus{
+        float: right;
+        font-size: 42px;
+        padding: 0px;
+        line-height: 30px;
+        margin: 0px;
+    }
+    .total-line{
+        height: 4px;
+        width: 100%;
+        display: inline-block;
+        background: #333;
+    }
+}

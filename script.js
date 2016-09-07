@@ -23,6 +23,13 @@ app.controller('programmaController',function($scope){
   $scope.addMaatregel = function(maatregel) {
 
     if ($scope.gekozenMaatregelen.indexOf(maatregel) === -1) {
+
+      for (var i = 0; i < $scope.maatregelen.length; i++) {
+        if ($scope.maatregelen[i].title === maatregel.title) {
+          $scope.maatregelen.splice(i, 1);
+        }
+      }
+
       $scope.gekozenMaatregelen.push(maatregel);
       console.log(maatregel);
     }
