@@ -1,0 +1,20 @@
+.leipe-papegaai{
+  width: 200px;
+  display: inline;
+}
+
+.maatregelen{
+  .panel{
+    position: relative;
+    padding: 0px 10px;
+    height:113px;
+    h6{
+      font-size: 11px;
+    }
+    .btn{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+}

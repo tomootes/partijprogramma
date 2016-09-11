@@ -1,0 +1,41 @@
+<div  class="col-md-10 col-md-offset-1">
+    <div class="a4 shadow">
+        <p class="upper-title">CONCEPT - VERKIEZINGSPROGRAMMA {{ program.partijnaam }} 2017-2021 </p>
+        <hr class="red">
+        <hr class="blue">
+        <h4 class="text-center"><img class="leipe-papegaai" src='images/ara.png'/>NL WEER VAN ONS!</h4>
+        <p>Miljoenen Nederlanders hebben schoon genoeg van populisme in ons land. Genoeg van de mediacratie en
+            consumentisme, tegenstellingen en ongelijkheid.</p>
+        <p></p>
+        <p>Hier is ons plan: in plaats van het financieren van de hele wereld en mensen die hier geen zin in hebben,
+            geven we het geld aan <sub>Ivo Niehe</sub>.</p>
+        <p></p>
+        <p>Zo gaat de partij van de {{ program.partijnaam }} dat doen:</p>
+        <ol>
+            <li ng-repeat="maatregel in program.gekozenMaatregelen">
+                <p>{{ maatregel.title }}</p>
+            </li>
+        </ol>
+        <p>Financiële paragraaf per maatregel en totaal:</p>
+        <ol>
+            <li ng-repeat="maatregel in program.gekozenMaatregelen">
+                <p>{{ maatregel.omzet }} mrd</p>
+            </li>
+        </ol>
+        <hr class="total">
+        <p>Totaal: <span ng-show="total > 0">+</span>{{ total | number:6 | commaToDecimal }}</p>
+        <p></p>
+        <p>Reageer via email op: <b>pvvee@nlweervanons.nl</b></p>
+    </div>
+    <div class="col-md-12 text-center">
+        <!-- Your share button code -->
+        <div class="fb-share-button"
+             data-href="http://nlweervanons.nl/program/{{ ID }}"
+             data-layout="button_count"
+                data-size="large">
+        </div>
+    </div>
+</div>
+
+
+

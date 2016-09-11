@@ -1,0 +1,35 @@
+.calculation{
+  margin-top: 0px !important;
+  .list-group-item{
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+    .plus{
+        float: right;
+      font-size: 3em;
+        padding: 0px;
+        line-height: 30px;
+        margin: 0px;
+    }
+    .total-line{
+        height: 4px;
+        width: 100%;
+        display: inline-block;
+        background: #333;
+    }
+  h1{
+    font-size: 3em;
+    margin: 0px 0px;
+  }
+
+  .total{
+    margin: 10px 0px;
+    display: block;
+    &.green{
+      color: #49E249;
+    }
+    &.red{
+      color: red;
+    }
+  }
+}

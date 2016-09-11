@@ -1,0 +1,47 @@
+@import 'bootstrap';
+@import 'maatregelen';
+@import 'calculation';
+@import 'loader';
+@import 'program';
+@import 'a4';
+
+body {
+  padding-bottom: 40px;
+}
+
+.jumbotron{
+    padding-bottom: 15px;
+    padding-top: 15px;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+	margin-top: 30px;
+	h4{
+		font-size: 19px;
+    text-shadow: 2px 2px #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+	}
+	form {
+		label {
+			font-weight: normal;
+			input {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+
+hr{
+  margin: 3px 0px;
+  &.red{
+    border-top: 2px solid #1b6d85;
+  }
+  &.blue{
+    border-top: 2px solid red;
+  }
+  &.total{
+    width: 15%;
+    border-top: 2px solid #333333;
+  }
+}
