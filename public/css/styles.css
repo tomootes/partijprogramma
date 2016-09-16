@@ -2361,12 +2361,6 @@ pre code {
 .container:after {
   clear: both;
 }
-@media (min-width: 768px) {
-  /* line 10, ../scss/bootstrap/_grid.scss */
-  .container {
-    width: 750px;
-  }
-}
 @media (min-width: 992px) {
   /* line 10, ../scss/bootstrap/_grid.scss */
   .container {
@@ -8798,7 +8792,7 @@ button.close {
 .maatregelen .panel {
   position: relative;
   padding: 0px 10px;
-  height: 113px;
+  height: 133px;
 }
 /* line 11, ../scss/_maatregelen.scss */
 .maatregelen .panel h6 {
@@ -8911,6 +8905,13 @@ button.close {
 .program .a4 sub {
   font-size: 0.5em;
 }
+/* line 15, ../scss/_program.scss */
+.program .facebook {
+  background: #365899;
+  border: 1px solid #365899;
+  color: white;
+  cursor: pointer;
+}
 
 /* line 1, ../scss/_a4.scss */
 .a4 {
@@ -8940,7 +8941,7 @@ body {
   padding-bottom: 40px;
 }
 
-/* line 12, ../scss/styles.scss */
+/* line 15, ../scss/styles.scss */
 .jumbotron {
   padding-bottom: 15px;
   padding-top: 15px;
@@ -8948,35 +8949,35 @@ body {
   padding-right: 30px !important;
   margin-top: 30px;
 }
-/* line 18, ../scss/styles.scss */
+/* line 21, ../scss/styles.scss */
 .jumbotron h4 {
   font-size: 19px;
   text-shadow: 2px 2px #FFFFFF;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 25, ../scss/styles.scss */
+/* line 28, ../scss/styles.scss */
 .jumbotron form label {
   font-weight: normal;
 }
-/* line 27, ../scss/styles.scss */
+/* line 30, ../scss/styles.scss */
 .jumbotron form label input {
   margin-right: 10px;
 }
 
-/* line 35, ../scss/styles.scss */
+/* line 38, ../scss/styles.scss */
 hr {
   margin: 3px 0px;
 }
-/* line 37, ../scss/styles.scss */
+/* line 40, ../scss/styles.scss */
 hr.red {
   border-top: 2px solid #1b6d85;
 }
-/* line 40, ../scss/styles.scss */
+/* line 43, ../scss/styles.scss */
 hr.blue {
   border-top: 2px solid red;
 }
-/* line 43, ../scss/styles.scss */
+/* line 46, ../scss/styles.scss */
 hr.total {
   width: 15%;
   border-top: 2px solid #333333;

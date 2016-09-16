@@ -19,6 +19,19 @@ app.controller('programController', ['$scope','$routeParams','Programs', functio
 				$scope.total = $scope.total + $scope.program.gekozenMaatregelen[i].omzet;
 			}
 
+			$scope.share = function(){
+
+				FB.ui(
+					{
+						method: 'share',
+						quote: 'Ik heb mijn eigen partijprogramma gemaakt op nlweervanons.nl! Doe het ook gratis op nlweervanons.nl',
+						href: 'http://nlweervanons.nl/#/program/' + $scope.ID
+					}, function(response){});
+
+			}
+
 		});
 
 }]);
+
+

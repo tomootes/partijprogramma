@@ -1,80 +1,80 @@
-<div class="col-md-12">
-    <div class="row">
-        <h1 class="text-center">NLWEERVANONS.NL</h1>
-        <div class="col-md-12">
-            <div class="jumbotron">
-                <h4 class="text-center">Verkiezingsprogramma <img class="leipe-papegaai" src='images/ara.png'/> Partij van
-                    de {{ partijnaam }}</h4>
-                <form>
-                    <label>
-                        <input type="radio" name="gender" value="Saamhorigheid" ng-model="partijnaam">Saamhorigheid<br>
-                    </label>
-                </form>
-                <form>
-                    <label>
-                        <input type="radio" name="gender" value="Eendracht" ng-model="partijnaam">Eendracht<br>
-                    </label>
-                </form>
-                <form>
-                    <label>
-                        <input type="radio" name="gender" value="Armoe" ng-model="partijnaam">Armoe<br>
-                    </label>
-                </form>
-                <form>
-                    <label>
-                        <input type="radio" name="gender" value="Burgers die er helemaal klaar mee wezen"
-                               ng-model="partijnaam">Burgers die er helemaal klaar mee wezen<br>
-                    </label>
-                </form>
-                <form>
-                    <label>
-                        <input type="radio" name="gender" value="Volk" ng-model="partijnaam">Volk<br>
-                    </label>
-                </form>
+<div class="row">
+    <h1 class="text-center">NLWEERVANONS.NL</h1>
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h4 class="text-center">Verkiezingsprogramma <img class="leipe-papegaai" src='images/ara.png'/> Partij van
+                de {{ partijnaam }}</h4>
+            <form>
+                <label>
+                    <input type="radio" name="gender" value="Saamhorigheid" ng-model="partijnaam">Saamhorigheid<br>
+                </label>
+            </form>
+            <form>
+                <label>
+                    <input type="radio" name="gender" value="Eendracht" ng-model="partijnaam">Eendracht<br>
+                </label>
+            </form>
+            <form>
+                <label>
+                    <input type="radio" name="gender" value="Armoe" ng-model="partijnaam">Armoe<br>
+                </label>
+            </form>
+            <form>
+                <label>
+                    <input type="radio" name="gender" value="Burgers die er helemaal klaar mee wezen"
+                           ng-model="partijnaam">Burgers die er helemaal klaar mee wezen<br>
+                </label>
+            </form>
+            <form>
+                <label>
+                    <input type="radio" name="gender" value="Volk" ng-model="partijnaam">Volk<br>
+                </label>
+            </form>
+            <form>
+                Anders:
+                <input type="text" name="firstname" ng-model="partijnaam">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row maatregelen">
+
+    <div class="col-md-2" ng-repeat="maatregel in maatregelen">
+        <div class="panel panel-default">
+            <h6>{{ maatregel.title }}</h6>
+            <span class="label label-primary">{{ maatregel.omzet }} miljard</span>
+            <div class="btn btn-default pull-right" ng-click="addMaatregel(maatregel)">
+                +
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron calculation">
             <div class="row">
-                <div class="maatregelen">
-                    <div class="col-md-2" ng-repeat="maatregel in maatregelen">
-                        <div class="panel panel-default" >
-                            <h6>{{ maatregel.title }}</h6>
-                            <span class="label label-primary">{{ maatregel.omzet }} miljard</span>
-                            <div class="btn btn-default pull-right" ng-click="addMaatregel(maatregel)">
-                                +
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h4 class="text-center">Gratis doorrekening</h4>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="maatregel in gekozenMaatregelen">{{ $index + 1 }}. {{
+                        maatregel.title }} <label class="pull-right">{{ maatregel.omzet }} miljard</label></li>
+                </ul>
+                <h1 class="pull-right">+</h1>
+                <div class="total-line"></div>
+                <h1 class="pull-right total" ng-class="{'green': total > 0, 'red': total < 0}">
+                    <span ng-show="total > 0">+</span>
+                    {{ total | number:6 | commaToDecimal }} MILJARD EUROS
+                </h1>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="jumbotron calculation">
-                <div class="row">
-                    <h4 class="text-center">Gratis doorrekening</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="maatregel in gekozenMaatregelen">{{ $index + 1 }}. {{
-                            maatregel.title }} <label class="pull-right">{{ maatregel.omzet }} miljard</label></li>
-                    </ul>
-                    <h1 class="pull-right">+</h1>
-                    <div class="total-line"></div>
-                    <h1 class="pull-right total" ng-class="{'green': total > 0, 'red': total < 0}">
-                        <span ng-show="total > 0">+</span>
-                        {{ total | number:6 | commaToDecimal }} MILJARD EUROS
-                    </h1>
-                </div>
-            </div>
+    <div class="col-md-12 text-center">
+        <div class="loader" ng-show="loading">
         </div>
-        <div class="col-md-12 text-center">
-            <div class="loader" ng-show="loading">
-            </div>
-            <button type="button" class="btn btn-primary btn-lg" ng-click="saveProgram()" ng-hide="programSent">GENEREER A4</button>
-        </div>
+        <button type="button" class="btn btn-primary btn-lg" ng-click="saveProgram()" ng-hide="programSent">GENEREER
+            A4
+        </button>
     </div>
 </div>
